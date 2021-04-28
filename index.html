@@ -130,8 +130,9 @@
         })
 
          document.getElementById('withdraw-button').addEventListener('click' , function(){
-            var WithdrawAmount=getInputNumber('withdraw-amount')
-            update('current-withdraw' , WithdrawAmount)
+            var withdrawAmount=getInputNumber('withdraw-amount')
+            update('current-withdraw' , withdrawAmount)
+            update('current-balance', -1*withdrawAmount)
             document.getElementById('withdraw-amount').value=''
 
          })
